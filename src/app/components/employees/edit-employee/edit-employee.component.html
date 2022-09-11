@@ -1,0 +1,38 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Employee</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="editEmployee()">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" name="id" id="id" [(ngModel)]="employee.id" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" [(ngModel)]="employee.name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" [(ngModel)]="employee.email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="number" class="form-control" name="phone" id="phone" [(ngModel)]="employee.phone">
+                </div>
+                <div class="mb-3">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input type="number" class="form-control" name="salary" id="salary" [(ngModel)]="employee.salary">
+                </div>
+                <div class="mb-3">
+                    <label for="department" class="form-label">Department</label>
+                    <input type="text" class="form-control" name="department" id="department" [(ngModel)]="employee.department">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary btn-space" >Save</button>
+                    <button type="button" class="btn btn-danger btn-space" (click)="deleteEmployee()">Delete</button>
+                    <a class="btn btn-secondary" routerLink='../../' role="button">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
